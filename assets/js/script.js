@@ -59,11 +59,11 @@ var lowerNum = "abcdefghijklmnopqrstuvwxyz0123456789";
 document.getElementById("password-btn").addEventListener("click", function() {
 
 
-     getPasswordOptions();
+    // getPasswordOptions();
 
     var options = getPasswordOptions();
 
-     alert("your password is" + genPassword( options ));
+     alert("your password is " + genPassword( options ));
   });
   
   function getPasswordOptions() {
@@ -314,7 +314,7 @@ else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options["nu
 else if ( options["uppercaseChars"] && options["lowercaseChars"] && options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
-    password = password + charsArray[15][generateRandom(charsArray[15].length-1)];
+    password = password + charsArray[14][generateRandom(charsArray[14].length-1)];
   
   }
 
