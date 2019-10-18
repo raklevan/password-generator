@@ -15,7 +15,7 @@ var upperNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 var upperSpec = "ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+-=" ;
 
-var lowerSpec = "abcdefghijklmnopqrstuvwxyz";
+var lowerSpec = "abcdefghijklmnopqrstuvwxyz~!@#$%^&*()_+-=";
 
 
 var numSpec = "0123456789~!@#$%^&*()_+-=" ;
@@ -239,7 +239,7 @@ else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options["nu
 else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
-    password = password + charsArray[8][generateRandom(charsArray[8][lowerSpec.length-1])];
+    password = password + charsArray[8][generateRandom(charsArray[8].length-1)];
   
     
   }
