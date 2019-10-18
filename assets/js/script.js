@@ -10,7 +10,7 @@ var num = "0123456789";
 
 var spec = "~!@#$%^&*()_+-=";
 
-var upperNumn = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+var upperNum = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 
 var upperSpec = "ABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*()_+-=" ;
@@ -32,10 +32,26 @@ var lowerNumSpec = "abcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-=";
 
 var upperLowerNumSpec = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_+-=";
 
-var lowerNum = "abcdefghijklmnopqrstuvwxyz0123456789"
+var lowerNum = "abcdefghijklmnopqrstuvwxyz0123456789";
 
 
-var charsArray = [ upper.split(" "), lower.split(" "), num.split(" "), spec.split(" "), upperLower.split(" "), upperNum.split(" "), upperSpec.split(" "), lowerNum.split(" "), lowerSpec.split(" "), numSpec.split(" "), upperLowerNum.split(" "), upperLowerSpec.split(" "), upperNumSpec.split(" "), lowerNumSpec.split(" "), upperLowerNumSpec.split(" ")];
+ var charsArray = [ 
+    upper.split(""), 
+   lower.split(""), 
+    num.split(""), 
+    spec.split(" "), 
+    upperLower.split(" "), 
+   upperNum.split(""), 
+   upperSpec.split(""), 
+   lowerNum.split(""), 
+   lowerSpec.split(""), 
+   numSpec.split(""), 
+   upperLowerNum.split(""), 
+   upperLowerSpec.split(""),
+    upperNumSpec.split(""), 
+    lowerNumSpec.split(""), 
+    upperLowerNumSpec.split("")
+  ];
 
 
 
@@ -43,11 +59,11 @@ var charsArray = [ upper.split(" "), lower.split(" "), num.split(" "), spec.spli
 document.getElementById("password-btn").addEventListener("click", function() {
 
 
-    getPasswordOptions();
+     getPasswordOptions();
 
     var options = getPasswordOptions();
 
-     alert("your password is" + genPassword(options));
+     alert("your password is" + genPassword( options ));
   });
   
   function getPasswordOptions() {
@@ -110,7 +126,7 @@ document.getElementById("password-btn").addEventListener("click", function() {
 
   function genPassword(options){
 
-    var password ="";
+    var password = "";
 
     // 1000
 
@@ -130,7 +146,7 @@ if ( options["uppercaseChars"] && !options["lowercaseChars"] && !options["numeri
 
 //0100
 
-else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options"[numericChars"] && !options["specialChars"){
+else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[1][generateRandom(charsArray[1].length-1)];
@@ -143,7 +159,7 @@ else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options"[n
 //0010
 
 
-else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options"[numericChars"] && !options["specialChars"){
+else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[2][generateRandom(charsArray[2].length-1)];
@@ -157,7 +173,7 @@ else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options"[n
 
 //0001
 
-else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && !options"[numericChars"] && options["specialChars"){
+else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && !options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[3][generateRandom(charsArray[3].length-1)];
@@ -169,7 +185,7 @@ else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && !options"[
 
 //1100
 
-else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options"[numericChars"] && !options["specialChars"){
+else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[4][generateRandom(charsArray[4].length-1)];
@@ -183,7 +199,7 @@ else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options"[nu
 
 //1010
 
-else if ( options["uppercaseChars"] && !options["lowercaseChars"] && options"[numericChars"] && !options["specialChars"){
+else if ( options["uppercaseChars"] && !options["lowercaseChars"] && options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[5][generateRandom(charsArray[5].length-1)];
@@ -196,7 +212,7 @@ else if ( options["uppercaseChars"] && !options["lowercaseChars"] && options"[nu
 
 //1001
 
-else if ( options["uppercaseChars"] && !options["lowercaseChars"] && !options"[numericChars"] && options["specialChars"){
+else if ( options["uppercaseChars"] && !options["lowercaseChars"] && !options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[6][generateRandom(charsArray[6].length-1)];
@@ -208,7 +224,7 @@ else if ( options["uppercaseChars"] && !options["lowercaseChars"] && !options"[n
 
 //0110
 
-else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options"[numericChars"] && !options["specialChars"){
+else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[7][generateRandom(charsArray[7].length-1)];
@@ -220,10 +236,10 @@ else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options"[nu
 
 //0101
 
-else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options"[numericChars"] && options["specialChars"){
+else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
-    password = password + charsArray[8][generateRandom(charsArray[8[lowerSpec.length-1)];
+    password = password + charsArray[8][generateRandom(charsArray[8][lowerSpec.length-1])];
   
     
   }
@@ -233,7 +249,7 @@ else if ( !options["uppercaseChars"] && options["lowercaseChars"] && !options"[n
 
 //0011
 
-else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options"[numericChars"] && options["specialChars"){
+else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[9][generateRandom(charsArray[9].length-1)];
@@ -245,7 +261,7 @@ else if ( !options["uppercaseChars"] && !options["lowercaseChars"] && options"[n
 
 //1110
 
-else if( options["uppercaseChars"] && options["lowercaseChars"] && options"[numericChars"] && !options["specialChars"){
+else if( options["uppercaseChars"] && options["lowercaseChars"] && options["numericChars"] && !options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[10][generateRandom(charsArray[10].length-1)];
@@ -258,7 +274,7 @@ else if( options["uppercaseChars"] && options["lowercaseChars"] && options"[nume
 //1101
 
 
-else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options"[numericChars"] && options["specialChars"){
+else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[11][generateRandom(charsArray[11].length-1)];
@@ -270,7 +286,7 @@ else if ( options["uppercaseChars"] && options["lowercaseChars"] && !options"[nu
 
 //1011
 
-else if( options["uppercaseChars"] && !options["lowercaseChars"] && options"[numericChars"] && options["specialChars"){
+else if( options["uppercaseChars"] && !options["lowercaseChars"] && options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[12][generateRandom(charsArray[12].length-1)];
@@ -282,31 +298,29 @@ else if( options["uppercaseChars"] && !options["lowercaseChars"] && options"[num
 
 //0111
 
-else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options"[numericChars"] && options["specialChars"){
+else if ( !options["uppercaseChars"] && options["lowercaseChars"] && options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[13][generateRandom(charsArray[14].length-1)];
   
-    
+   
   }
+ 
   
 }
 
 //11111
 
-else if ( options["uppercaseChars"] && options["lowercaseChars"] && options"[numericChars"] && options["specialChars"){
+else if ( options["uppercaseChars"] && options["lowercaseChars"] && options["numericChars"] && options["specialChars"]){
 
   for (let i = 0; i < options["length"]; i++) {
     password = password + charsArray[15][generateRandom(charsArray[15].length-1)];
   
-    
   }
-  
+
 }
-
-
-return password;
-
+ 
+  return password;
   }
 
 
