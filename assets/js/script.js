@@ -63,7 +63,13 @@ document.getElementById("password-btn").addEventListener("click", function() {
 
     var options = getPasswordOptions();
 
-     alert("your password is " + genPassword( options ));
+     var $p = document.createElement("p");
+
+     $p.textContent = "your password is " + genPassword( options );
+
+     document.body.appendChild($p);
+     
+  
   });
   
   function getPasswordOptions() {
